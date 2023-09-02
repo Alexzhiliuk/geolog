@@ -547,9 +547,13 @@ input::placeholder, textarea::placeholder {
   width: max-content;
 }
 .section-hero__air-card-text_mark::before {
-  content: url("../img/hero-air-card-mark.svg");
+  content: "";
+  height: 2.0833333333vw;
+  width: 26.5833333333vw;
+  background: #D9E842;
+  border-radius: 0.25vw;
+  display: block;
   position: absolute;
-  width: 100%;
   z-index: -1;
   top: 1px;
   left: -5px;
@@ -574,16 +578,16 @@ input::placeholder, textarea::placeholder {
 }
 
 .phone {
-  border-radius: 10px;
+  border-radius: 0.8333333333vw;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
   padding: 10px;
 }
 .phone__icon {
-  height: 40px;
-  width: 40px;
-  border-radius: 5px;
-  margin-right: 9px;
+  height: 3.3333333333vw;
+  width: 3.3333333333vw;
+  border-radius: 0.4166666667vw;
+  margin-right: 0.75vw;
   float: left;
   overflow: hidden;
   position: relative;
@@ -600,20 +604,21 @@ input::placeholder, textarea::placeholder {
 }
 .phone__icon-img {
   position: absolute;
+  width: 1.3333333333vw;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 .phone__number {
   color: #FFF;
-  font-size: 17px;
+  font-size: 1.4166666667vw;
   font-style: normal;
   font-weight: 800;
   line-height: 125.8%;
 }
 .phone__text {
   color: #D9E842;
-  font-size: 13px;
+  font-size: 1.0833333333vw;
   font-style: normal;
   font-weight: 600;
   line-height: 125.8%;
