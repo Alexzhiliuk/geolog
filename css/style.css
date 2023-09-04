@@ -1230,6 +1230,9 @@ button {
   left: 4.3333333333vw;
   bottom: 3.5vw;
 }
+.examine__air-card:first-of-type .examine__air-card-arrow > img {
+  width: 2.1666666667vw;
+}
 .examine__air-card:last-of-type {
   background-image: url("../img/examine-card-background.png");
   background-repeat: no-repeat;
@@ -1243,6 +1246,9 @@ button {
   left: 29.5833333333vw;
   top: 8.75vw;
 }
+.examine__air-card:last-of-type .examine__air-card-arrow > img {
+  width: 18.0833333333vw;
+}
 .examine__air-card-title {
   color: #1F1F1F;
   font-size: 1.8333333333vw;
@@ -1255,6 +1261,9 @@ button {
   left: -2.3333333333vw;
   bottom: 1.1666666667vw;
   cursor: pointer;
+}
+.examine__air-card-video-icon > img {
+  width: 5.6666666667vw;
 }
 .examine__air-card-arrow {
   position: absolute;
