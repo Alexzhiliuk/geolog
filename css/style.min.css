@@ -441,6 +441,7 @@ img {
   padding-block: 2.0833333333vw;
   padding-inline: 2.5vw;
   border-radius: 0.8333333333vw;
+  transition: transform 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -453,6 +454,9 @@ img {
   color: #1F1F1F;
   background-color: #FFF;
   box-shadow: 0px 2.5vw 3.8333333333vw 0px rgba(0, 0, 0, 0.15);
+}
+.btn:hover {
+  transform: scale(1.2);
 }
 
 .circle-icon {
@@ -1313,7 +1317,7 @@ button {
 }
 
 .section-official {
-  padding-block: 5vw;
+  padding-block: 5vw 0;
   background: #FFF;
   position: relative;
   z-index: -2;
@@ -1436,7 +1440,7 @@ button {
   width: 21.1666666667vw;
   border-radius: 0.8333333333vw;
   background: #D9E842;
-  padding: 1.6666666667vw 1.6666666667vw 4.5833333333vw;
+  padding: 1.6666666667vw 1.6666666667vw 0;
   position: absolute;
   right: 8.9166666667vw;
   bottom: 6.6666666667vw;
@@ -1451,10 +1455,8 @@ button {
 }
 .section-stages__card-btn {
   width: 17.75vw;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, 20px);
+  position: relative;
+  bottom: -12px;
   box-shadow: 0px 2.5vw 3.8333333333vw 0px rgba(0, 0, 0, 0.15);
 }
 .section-stages__card-btn.btn {
@@ -1473,11 +1475,8 @@ button {
 }
 .stages__row_top::before {
   content: "";
-  width: 89.0833333333vw;
-  height: 0.1666666667vw;
-  background-image: url("../img/stages-line-top.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  width: 100vw;
+  border: 1px dashed #D0D0D0;
   position: absolute;
   left: 1.8333333333vw;
   top: 1.8333333333vw;
@@ -1489,12 +1488,9 @@ button {
 }
 .stages__row_bottom::before {
   content: "";
-  width: 48.5vw;
-  height: 0.1666666667vw;
+  width: 100vw;
+  border: 1px dashed #D0D0D0;
   position: absolute;
-  background-image: url("../img/stages-line-bottom.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
   right: 17.0833333333vw;
   top: 1.8333333333vw;
 }
