@@ -1307,6 +1307,10 @@ button {
     width: 100%;
     margin-top: 3.3846153846vw;
   }
+  .protection__title.h2 {
+    font-size: 7.6923076923vw;
+    line-height: 88.3%;
+  }
 }
 .protection__subtitle {
   color: #FFF;
@@ -1321,7 +1325,7 @@ button {
   .protection__subtitle {
     margin-top: 3.3846153846vw;
     font-size: 4.6153846154vw;
-    width: 100%;
+    width: 102%;
   }
   .protection__subtitle b {
     font-weight: 700;
@@ -1792,6 +1796,7 @@ button {
 @media (max-width: 767.98px) {
   .examine__title {
     width: 100%;
+    line-height: 104.3%;
   }
 }
 .examine__items {
@@ -2435,7 +2440,7 @@ button {
 @media (max-width: 767.98px) {
   .stages__row_bottom::before {
     width: 0;
-    height: 90%;
+    height: 100%;
     top: -13.8461538462vw;
     left: 6.1538461538vw;
     z-index: -1;
