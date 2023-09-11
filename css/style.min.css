@@ -455,6 +455,10 @@ img {
   overflow: hidden;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .outline {
   border: 1px solid #FFF;
   border-radius: 10px;
@@ -2852,4 +2856,197 @@ button {
   .footer__author {
     font-size: 3.0769230769vw;
   }
+}
+.footer__map {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-block: 2.5vw 0.4166666667vw;
+  position: relative;
+}
+.footer__map-title {
+  color: #1F1F1F;
+  font-size: 2.9166666667vw;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 103.8%; /* 36.33px */
+  width: 24.0833333333vw;
+  margin-top: 5vw;
+  position: relative;
+}
+.footer__map-arrow {
+  position: absolute;
+  bottom: 3.3333333333vw;
+  left: 24.1666666667vw;
+}
+.footer__map-arrow > img {
+  width: 14.6666666667vw;
+}
+.footer__map-map {
+  width: 29vw;
+  height: 18.0833333333vw;
+  margin-left: 2.5vw;
+  border-radius: 0.8333333333vw;
+  overflow: hidden;
+}
+
+.section-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  border-radius: 1.6666666667vw;
+  background: #FFF;
+  max-width: 32.75vw;
+  width: 100%;
+  padding: 3.3333333333vw 2.5vw 2.5vw;
+  position: relative;
+}
+.modal__title {
+  color: #171717;
+  text-align: center;
+  font-size: 2.0833333333vw;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 113.3%; /* 28.325px */
+  text-transform: uppercase;
+}
+.modal__subtitle {
+  color: #1D1D1D;
+  font-size: 1.1666666667vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113.3%;
+  text-align: center;
+  margin-top: 0.8333333333vw;
+}
+.modal__form {
+  margin-top: 1.6666666667vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.modal__input {
+  color: #1F1F1F;
+  text-align: center;
+  font-size: 1.1666666667vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 148.3%; /* 20.762px */
+  border-radius: 0.8333333333vw;
+  border: 1px solid #E8E8E8;
+  background: #F5F5F5;
+  padding: 1.6666666667vw;
+  max-width: 23.6666666667vw;
+  width: 100%;
+}
+.modal__input:not(:last-of-type) {
+  margin-bottom: 1.25vw;
+}
+.modal__input::placeholder {
+  color: #262626;
+  opacity: 0.4;
+}
+.modal__input:not(:placeholder-shown):invalid {
+  border: 1px solid #F9D7D7;
+  background: #FDF1F1;
+}
+.modal__button {
+  margin-top: 1.6666666667vw;
+  box-shadow: 0px 3.8333333333vw 3.8333333333vw 0px rgba(0, 0, 0, 0.1);
+  color: #262626;
+  max-width: 23.6666666667vw;
+  width: 100%;
+  white-space: nowrap;
+}
+.modal__politics {
+  color: #A6A6A6;
+  text-align: center;
+  font-size: 0.8333333333vw;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 113.3%; /* 11.33px */
+  margin-top: 0.8333333333vw;
+  max-width: 23.6666666667vw;
+  width: 100%;
+  margin-inline: auto;
+  position: relative;
+}
+.modal__politics > a {
+  text-decoration: underline;
+  color: #A6A6A6;
+}
+.modal__close {
+  position: absolute;
+  top: 1.25vw;
+  right: 1.25vw;
+  cursor: pointer;
+}
+.modal__icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5vw;
+}
+.modal__icon > img {
+  width: 3.0833333333vw;
+}
+.modal_thanks {
+  padding-block: 7.3333333333vw;
+}
+.modal_thanks__close {
+  color: #ADADAD;
+  text-align: center;
+  font-size: 1.1666666667vw;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 148.3%; /* 20.762px */
+  letter-spacing: 0.2858333333vw;
+  text-transform: uppercase;
+  border-radius: 0.8333333333vw;
+  background: #F4F4F4;
+  max-width: 100%;
+  width: 23.6666666667vw;
+  padding: 2.0833333333vw 0.8333333333vw;
+  margin-inline: auto;
+  margin-top: 5vw;
+  cursor: pointer;
+}
+
+.fixed-icon {
+  position: fixed;
+  right: 2.9166666667vw;
+  bottom: 1.6666666667vw;
+  border-radius: 0.4166666667vw;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(0.3333333333vw);
+  padding: 0.4166666667vw 1.6666666667vw 0.4166666667vw 0.5833333333vw;
+  width: 7.0833333333vw;
+  cursor: pointer;
+  z-index: 98;
+}
+.fixed-icon__text {
+  color: #FFF;
+  font-size: 1vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 84.8%; /* 10.176px */
+  opacity: 0.7;
+}
+.fixed-icon__img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+.fixed-icon__img > img {
+  width: 2.5833333333vw;
 }

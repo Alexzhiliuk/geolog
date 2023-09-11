@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="css/style.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <title>Главная</title>
+
+    <!-- Yandex Map -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=50d1c63f-8679-47a9-8d1a-01ba051a5cb1&lang=ru_RU" type="text/javascript">
+    </script>
 </head>
     <body>
 
@@ -518,6 +522,77 @@
         </div>
     </div>
 </section>
+
+            <!-- Modal Window 1 -->
+            <section class="section-modal hidden" id="modal-window-1">
+    <div class="modal">
+        <div class="modal__close">
+            <img src="img/modal-close.svg" alt="">
+        </div>
+        <h3 class="modal__title">Заказать изыскания</h3>
+        <div class="modal__subtitle">
+            <b>Оставляйте заявку</b> – мы свяжемся с вами, ответим на все вопросы и подберем удобное время
+        </div>
+        <form class="modal__form">
+            <input class="modal__input" pattern="[А-Яа-яA-Za-z ]{1,32}" type="text" placeholder="Как вас зовут?" required>
+            <input class="modal__input" pattern="[0-9+]{1,16}" type="text" placeholder="Ваш номер телефона" required>
+            <button class="modal__button btn btn_green" type="submit">заказать изыскания</button>
+        </form>
+        <div class="modal__politics">
+            Нажимая кнопку выше вы даете свое согласие на обработку <a href="#">Персональных данных</a>
+        </div>
+    </div>
+</section>
+
+
+            <!-- Modal Window 2 -->
+            <section class="section-modal hidden" id="modal-window-2">
+    <div class="modal">
+        <div class="modal__close">
+            <img src="img/modal-close.svg" alt="">
+        </div>
+        <h3 class="modal__title">Заказать звонок</h3>
+        <div class="modal__subtitle">
+            <b>Оставляйте заявку</b> – мы свяжемся с вами, ответим на все вопросы и подберем удобное время
+        </div>
+        <form class="modal__form">
+            <input class="modal__input" pattern="[А-Яа-яA-Za-z ]{1,32}" type="text" placeholder="Как вас зовут?" required>
+            <input class="modal__input" pattern="[0-9+]{1,16}" type="text" placeholder="Ваш номер телефона" required>
+            <button class="modal__button btn btn_green" type="submit">заказать звонок</button>
+        </form>
+        <div class="modal__politics">
+            Нажимая кнопку выше вы даете свое согласие на обработку <a href="#">Персональных данных</a>
+        </div>
+    </div>
+</section>
+<script>
+
+</script>
+            
+            <!-- Modal Window Thanks -->
+            <section class="section-modal section-modal_thanks hidden" id="modal-window-thanks">
+    <div class="modal modal_thanks">
+        <div class="modal__icon">
+            <img src="img/modal-icon.svg" alt="">
+        </div>
+        <h3 class="modal__title">Ваша заявка успешно отправлена!</h3>
+        <div class="modal__subtitle">
+            <b>Ожидайте звонка от нас</b>
+        </div>
+        <div class="modal_thanks__close">
+            Закрыть окно
+        </div>
+    </div>
+</section>
+
+            
+            <!-- Fixed Icon -->
+            <a href="#" class="fixed-icon">
+    <div class="fixed-icon__text">Связаться с нами</div>
+    <div class="fixed-icon__img">
+        <img src="img/fixed-icon.svg" alt="">
+    </div>
+</a>
             
         </main>
 
@@ -544,13 +619,20 @@
                 <button class="footer__air-card-form-btn btn btn_white">ЗАКАЗАТЬ</button>
             </form>
         </div>
+        <div class="footer__map">
+            <h3 class="footer__map-title">Или приезжайте к нам в офис</h3>
+            <div class="footer__map-arrow">
+                <img src="img/map-arrow.svg" alt="">
+            </div>
+            <div class="footer__map-map" id="map"></div>
+        </div>
         <div class="footer__row footer__row_top">
             <div class="footer__logo">
                 <img src="img/logo-footer.svg" alt="">
             </div>
             <div class="footer__payments">
-                <img src="img/sber.png" alt="">
-                <img src="img/ypay.png" alt="">
+                <img src="img/mastercard.png" alt="">
+                <img src="img/tinkoff.svg" alt="">
                 <img src="img/sber.png" alt="">
                 <img src="img/ypay.png" alt="">
             </div>
@@ -568,5 +650,62 @@
 </footer>
 
         <script src="js/app.min.js"></script>
+        <script>
+
+            ymaps.ready(init);
+            function init(){
+                // Создание карты.
+                var myMap = new ymaps.Map("map", {
+                    // Координаты центра карты.
+                    // Порядок по умолчанию: «широта, долгота».
+                    // Чтобы не определять координаты центра карты вручную,
+                    // воспользуйтесь инструментом Определение координат.
+                    center: [55.665861, 37.7389992],
+                    // Уровень масштабирования. Допустимые значения:
+                    // от 0 (весь мир) до 19.
+                    zoom: 11,
+                    controls: []
+                });
+
+                myMap.geoObjects.add(new ymaps.Placemark([55.665861, 37.7389992], {
+                    
+                }))
+            }
+
+            // Open modal window 1
+            $(".section-hero__btn, .section-stages__card-btn").on("click", function(e) {
+                e.preventDefault()
+                $("#modal-window-1").removeClass("hidden")
+                $("body").addClass("lock")
+            })
+        
+            // Open modal window 2
+            $(".header__phone").on("click", function(e) {
+                e.preventDefault()
+                $("#modal-window-2").removeClass("hidden")
+                $("body").addClass("lock")
+            })
+
+            // Open modal window thanks
+            $(".footer__air-card-form-btn").on("click", function(e) {
+                e.preventDefault()
+                $("#modal-window-thanks").removeClass("hidden")
+                $("body").addClass("lock")
+            })
+
+            // Close modal window
+            $(".modal__close, .modal_thanks__close").on("click", function() {
+                $(this).parent().parent().addClass("hidden")
+                $("body").removeClass("lock")
+            })
+
+            $(".modal__button").on("click", function(e) {
+                e.preventDefault()
+                $(this).parent().parent().parent().addClass("hidden")
+                $("#modal-window-thanks").removeClass("hidden")
+            })
+
+
+        </script>
     </body>
 </html>
