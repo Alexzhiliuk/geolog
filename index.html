@@ -73,7 +73,7 @@
             <div class="section-hero__air-card-text_mark green-mark">Ответьте на 3 простых вопроса, </div>
             чтобы узнать конечную стоимость изысканий в вашем случае
         </div>
-        <a href="#" class="section-hero__air-card-btn btn btn_green">узнать цену</a>
+        <button class="section-hero__air-card-btn btn btn_green">узнать цену</button>
     </div>
     
 </section>
@@ -585,6 +585,192 @@
     </div>
 </section>
 
+
+            <!-- Quiz -->
+            <section class="section-modal hidden" id="modal-window-quiz">
+    <div class="modal modal_quiz">
+        <div class="modal__close">
+            <img src="img/modal-close.svg" alt="">
+        </div>
+        <div class="steps__numbers">
+            <div class="steps__numbers-line"></div>
+            <div class="steps__number steps__number_active" data-number="1">
+                <div class="steps__number-icon">
+                    <img role="default" src="img/quiz-step-number.svg" alt="">
+                    <img role="active" src="img/quiz-step-number-active.svg" alt="">
+                    <img role="done" src="img/quiz-step-number-done.svg" alt="">
+                </div>
+                <div class="steps__number-mobile">
+                    Вопрос 1 <span>из 5</span>
+                </div>
+            </div>
+            <div class="steps__number" data-number="2">
+                <div class="steps__number-icon">
+                    <img role="default" src="img/quiz-step-number.svg" alt="">
+                    <img role="active" src="img/quiz-step-number-active.svg" alt="">
+                    <img role="done" src="img/quiz-step-number-done.svg" alt="">
+                </div>
+                <div class="steps__number-mobile">
+                    Вопрос 2 <span>из 5</span>
+                </div>
+            </div>
+            <div class="steps__number" data-number="3">
+                <div class="steps__number-icon">
+                    <img role="default" src="img/quiz-step-number.svg" alt="">
+                    <img role="active" src="img/quiz-step-number-active.svg" alt="">
+                    <img role="done" src="img/quiz-step-number-done.svg" alt="">
+                </div>
+                <div class="steps__number-mobile">
+                    Вопрос 3 <span>из 5</span>
+                </div>
+            </div>
+            <div class="steps__number" data-number="4">
+                <div class="steps__number-icon">
+                    <img role="default" src="img/quiz-step-number.svg" alt="">
+                    <img role="active" src="img/quiz-step-number-active.svg" alt="">
+                    <img role="done" src="img/quiz-step-number-done.svg" alt="">
+                </div>
+                <div class="steps__number-mobile">
+                    Вопрос 4 <span>из 5</span>
+                </div>
+            </div>
+            <div class="steps__number" data-number="5">
+                <div class="steps__number-icon">
+                    <img role="default" src="img/quiz-step-number.svg" alt="">
+                    <img role="active" src="img/quiz-step-number-active.svg" alt="">
+                    <img role="done" src="img/quiz-step-number-done.svg" alt="">
+                </div>
+                <div class="steps__number-mobile">
+                    Вопрос 5 <span>из 5</span>
+                </div>
+            </div>
+            
+
+        </div>
+        <form class="steps">
+            <div class="steps__step step" data-step="1">
+                <h3 class="modal__title step__title">
+                    <span class="step__title-num">01</span>Какой у вас объект?
+                </h3>
+                <div class="step__body">
+                    <div class="radio-buttons radio-buttons_image">
+                        <label class="radio-button radio-button_image">
+                            <img class="radio-button_image__img" src="img/input-image-1.jpg" alt="">
+                            <div class="radio-button__text radio-button_image__text">Частный дом</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+                        <label class="radio-button radio-button_image">
+                            <img class="radio-button_image__img" src="img/input-image-2.jpg" alt="">
+                            <div class="radio-button__text radio-button_image__text">Промышленный объект, склад</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+                        <label class="radio-button radio-button_image">
+                            <img class="radio-button_image__img" src="img/input-image-3.jpg" alt="">
+                            <div class="radio-button__text radio-button_image__text">Другое</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="steps__step step hidden" data-step="2">
+                <h3 class="modal__title step__title">
+                    <span class="step__title-num">02</span>какая Площадь пятна застройки?
+                </h3>
+                <div class="step__body">
+                    <div class="radio-buttons radio-buttons_text">
+                        <label class="radio-button radio-button_text">
+                            <div class="radio-button__text radio-button_text__text">До 230 кв.м</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+                        <label class="radio-button radio-button_text">
+                            <div class="radio-button__text radio-button_text__text">От 230 до 500 кв.м</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+                        <label class="radio-button radio-button_text">
+                            <div class="radio-button__text radio-button_text__text">От 500 до 1500 кв.м</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+                        <label class="radio-button radio-button_text">
+                            <div class="radio-button__text radio-button_text__text">Более 1500 кв.м</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+            <div class="steps__step step hidden" data-step="3">
+                <h3 class="modal__title step__title">
+                    <span class="step__title-num">03</span>Когда планируете работы?
+                </h3>
+                <div class="step__body">
+                    <div class="radio-buttons radio-buttons_icon">
+                        <label class="radio-button radio-button_icon">
+                            <img class="radio-button_icon__img" src="img/quiz-icon-1.svg" alt="">
+                            <div class="radio-button__text radio-button_icon__text">Как можно быстрее</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+                        <label class="radio-button radio-button_icon">
+                            <img class="radio-button_icon__img" src="img/quiz-icon-2.svg" alt="">
+                            <div class="radio-button__text radio-button_icon__text">В течение месяца</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+                        <label class="radio-button radio-button_icon">
+                            <img class="radio-button_icon__img" src="img/quiz-icon-3.svg" alt="">
+                            <div class="radio-button__text radio-button_icon__text">Через два и более месяцев</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="steps__step step hidden" data-step="4">
+                <h3 class="modal__title step__title">
+                    <span class="step__title-num">04</span>Куда отправить стоимость?
+                </h3>
+                <div class="step__body">
+                    <div class="radio-buttons radio-buttons_icon">
+                        <label class="radio-button radio-button_icon" data-way="1">
+                            <img class="radio-button_icon__img" src="img/quiz-icon-4.svg" alt="">
+                            <div class="radio-button__text radio-button_icon__text">В WhatsApp</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+                        <label class="radio-button radio-button_icon" data-way="2">
+                            <img class="radio-button_icon__img" src="img/quiz-icon-5.svg" alt="">
+                            <div class="radio-button__text radio-button_icon__text">Перезвоните, у меня остались вопросы</div>
+                            <input name="object-type" type="radio" hidden>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+            <div class="steps__step step hidden" data-step="5">
+                <h3 class="modal__title step__title">
+                    <span class="step__title-num">05</span>Все готово!
+                </h3>
+                <div class="step__body step__body_pl">
+                    <div class="step__text hidden" data-way="1">Укажите свой номер WhatsApp чтобы могли вам отправить стоимость работ </div>
+                    <div class="step__text hidden" data-way="2">Укажите свой номер телефона чтобы могли вам позвонить, назвать стоимость работ и ответить на вопросы</div>
+                    <div class="step__input hidden" data-way="1">
+                        <input class="modal__input modal__input_left" pattern="[0-9+]{1,16}" type="text" placeholder="Ваш номер WhatsApp">
+                        <div class="modal__button step__button btn btn_green">Отправить</div>
+                    </div>
+                    <div class="step__input hidden" data-way="2">
+                        <input class="modal__input modal__input_left" pattern="[0-9+]{1,16}" type="text" placeholder="Ваш номер телефона">
+                        <div class="modal__button step__button btn btn_green">Отправить</div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="steps__footer">
+            <div class="steps__progress" data-progress="0" data-step="1"></div>
+            <div class="steps__footer-text">
+                <span>Расчет стоимости готов на</span>
+                <span class="steps__percents">0%</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
             
             <!-- Fixed Icon -->
             <a href="#" class="fixed-icon">
@@ -693,6 +879,13 @@
                 $("body").addClass("lock")
             })
 
+            // Open modal window quiz
+            $(".section-hero__air-card-btn").on("click", function(e) {
+                e.preventDefault()
+                $("#modal-window-quiz").removeClass("hidden")
+                $("body").addClass("lock")
+            })
+
             // Close modal window
             $(".modal__close, .modal_thanks__close").on("click", function() {
                 $(this).parent().parent().addClass("hidden")
@@ -701,9 +894,48 @@
 
             $(".modal__button").on("click", function(e) {
                 e.preventDefault()
-                $(this).parent().parent().parent().addClass("hidden")
-                $("#modal-window-thanks").removeClass("hidden")
+                if ($(this).hasClass("step__button")) {
+                    $("#modal-window-quiz").addClass("hidden")
+                    $("#modal-window-thanks").removeClass("hidden")
+                } else {
+                    $(this).parent().parent().parent().addClass("hidden")
+                    $("#modal-window-thanks").removeClass("hidden")
+                }
             })
+
+            // Quiz
+            $(".step input[type=radio]").on('click', function() {
+                // Step body
+                let step = Number($(".steps__progress").attr("data-step"))
+                if (step == 5) {
+                    return
+                }
+                $(`.step[data-step=${step}]`).addClass('hidden')
+                $(`.step[data-step=${step+1}]`).removeClass('hidden')
+                // Progress bar
+                $(".steps__progress").attr("data-step", step+1)
+                $(".steps__progress").attr("data-progress", 25*step)
+                $(".steps__percents").html(`${25*step}%`)
+                // Numbers
+                $(".steps__number_active").removeClass("steps__number_active").addClass("steps__number_done").next().addClass("steps__number_active")
+            })
+
+            $(".step[data-step=4] input[type=radio]").on('click', function() {
+                let way = $(this).parent().attr("data-way")
+                $(`.step[data-step=5] .step__text[data-way=${way}]`).removeClass("hidden")
+                $(`.step[data-step=5] .step__input[data-way=${way}]`).removeClass("hidden")
+            })
+
+            $(".modal_quiz .modal__close").on("click", function() {
+                $(".modal_quiz .steps .step").addClass("hidden")
+                $(".modal_quiz .steps .step[data-step=1]").removeClass("hidden")
+                $(".modal_quiz .steps__progress").attr("data-progress", "0").attr("data-step", "1")
+                $(".steps__percents").html("0%")
+                $(".modal_quiz .steps__number").removeClass("steps__number_active").removeClass("steps__number_done")
+                $(".modal_quiz .steps__number[data-number=1]").addClass("steps__number_active")
+            })
+
+
 
 
         </script>
