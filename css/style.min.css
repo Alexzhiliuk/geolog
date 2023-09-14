@@ -846,6 +846,7 @@ button {
   border-radius: 1.5384615385vw;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(1.2307692308vw);
+  -webkit-backdrop-filter: blur(1.2307692308vw);
 }
 .header__contact:not(:last-of-type) {
   margin-right: 3.0769230769vw;
@@ -858,6 +859,7 @@ button {
   border-radius: 0.8333333333vw;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 0.8333333333vw;
 }
 .phone__icon {
@@ -878,6 +880,7 @@ button {
   background: #FFF;
   opacity: 0.1;
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .phone__icon-img {
   position: absolute;
@@ -1068,6 +1071,7 @@ button {
   border-radius: 100%;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1204,6 +1208,7 @@ button {
   border-radius: 0.8333333333vw;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
   position: relative;
 }
 @media (max-width: 767.98px) {
@@ -2783,7 +2788,7 @@ button {
 }
 @media (max-width: 767.98px) {
   .footer__row {
-    padding-block: 10px;
+    padding-block: 3.0769230769vw 12.3076923077vw;
   }
 }
 .footer__row_top {
@@ -3156,6 +3161,7 @@ button {
   border-radius: 0.4166666667vw;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(0.3333333333vw);
+  -webkit-backdrop-filter: blur(0.3333333333vw);
   padding: 0.4166666667vw 1.6666666667vw 0.4166666667vw 0.5833333333vw;
   width: 7.0833333333vw;
   cursor: pointer;
@@ -3167,6 +3173,7 @@ button {
     bottom: 3.0769230769vw;
     width: 26.1538461538vw;
     backdrop-filter: blur(1.2307692308vw);
+    -webkit-backdrop-filter: blur(1.2307692308vw);
     border-radius: 1.5384615385vw;
     padding: 1.5384615385vw 6.1538461538vw 1.5384615385vw 2.1538461538vw;
   }
