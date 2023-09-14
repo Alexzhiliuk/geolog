@@ -880,7 +880,7 @@
             })
 
             // Open modal window quiz
-            $(".section-hero__air-card-btn").on("click", function(e) {
+            $(".section-hero__air-card-btn, .protection__price-btn").on("click", function(e) {
                 e.preventDefault()
                 $("#modal-window-quiz").removeClass("hidden")
                 $("body").addClass("lock")
@@ -926,13 +926,18 @@
                 $(`.step[data-step=5] .step__input[data-way=${way}]`).removeClass("hidden")
             })
 
-            $(".modal_quiz .modal__close").on("click", function() {
+            var resetQuiz = function() {
                 $(".modal_quiz .steps .step").addClass("hidden")
                 $(".modal_quiz .steps .step[data-step=1]").removeClass("hidden")
                 $(".modal_quiz .steps__progress").attr("data-progress", "0").attr("data-step", "1")
                 $(".steps__percents").html("0%")
                 $(".modal_quiz .steps__number").removeClass("steps__number_active").removeClass("steps__number_done")
                 $(".modal_quiz .steps__number[data-number=1]").addClass("steps__number_active")
+                $(".modal_quiz .step__text, .modal_quiz .step__input").addClass("hidden")
+            }
+
+            $(".modal_quiz .modal__close, .modal_quiz .step__button").on("click", function() {
+                resetQuiz()
             })
 
 

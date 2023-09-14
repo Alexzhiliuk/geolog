@@ -481,6 +481,7 @@ img {
   justify-content: center;
 }
 .btn_green {
+  color: #1F1F1F;
   background: linear-gradient(94deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.34) 35.94%, rgba(255, 255, 255, 0) 100%), #D9E842;
   box-shadow: 0px 3.8333333333vw 3.8333333333vw 0px rgba(0, 0, 0, 0.25);
 }
