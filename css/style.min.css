@@ -3244,16 +3244,16 @@ button {
 .steps__number {
   position: relative;
 }
-.steps__number:not(.steps__number_active, .steps__number_done) > .steps__number-icon > img[role=default] {
+.steps__number:not(.steps__number_active, .steps__number_done) > .steps__number-icon > img[data-role=default] {
   display: block;
 }
-.steps__number_active > .steps__number-icon > img[role=active] {
+.steps__number_active > .steps__number-icon > img[data-role=active] {
   display: block;
 }
 .steps__number_active.steps__number::after {
   color: #282828;
 }
-.steps__number_done > .steps__number-icon > img[role=done] {
+.steps__number_done > .steps__number-icon > img[data-role=done] {
   display: block;
 }
 .steps__number::after {
@@ -3520,6 +3520,7 @@ button {
   }
 }
 .radio-button__text {
+  display: block;
   color: #1D1D1D;
   text-align: center;
   font-size: 1.1666666667vw;
@@ -3607,4 +3608,66 @@ button {
     margin-top: 0;
     margin-left: 1.5384615385vw;
   }
+}
+
+.section-video {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video {
+  width: 100%;
+  cursor: pointer;
+}
+.video__background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.video__wrapper {
+  position: relative;
+  width: 70%;
+  border-radius: 0.8333333333vw;
+  overflow: hidden;
+}
+@media (max-width: 767.98px) {
+  .video__wrapper {
+    width: 100%;
+  }
+}
+.video__wrapper:hover .video__control {
+  opacity: 1;
+}
+.video__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  z-index: 99;
+}
+.video__close > img {
+  width: 20px;
+}
+.video__control {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.video__pause {
+  width: 30px;
+}
+.video__play {
+  width: 30px;
 }
