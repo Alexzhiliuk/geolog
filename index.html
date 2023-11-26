@@ -10,8 +10,8 @@
     <title>Главная</title>
 
     <!-- Yandex Map -->
-   <!--  <script src="https://api-maps.yandex.ru/2.1/?apikey=50d1c63f-8679-47a9-8d1a-01ba051a5cb1&lang=ru_RU">
-    </script> -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=50d1c63f-8679-47a9-8d1a-01ba051a5cb1&lang=ru_RU">
+    </script>
 </head>
     <body>
 
@@ -514,7 +514,7 @@
         <h2 class="h2 h2_50 section-reviews__title">Отзывы</h2>
         <div class="reviews">
             <div class="reviews__yandex">
-                <!-- <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/222209102691?comments"></iframe> -->
+                <iframe style="width:100%;height:100%;border:1px solid #e6e6e6;border-radius:8px;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/222209102691?comments"></iframe>
                 
             </div>
             
@@ -849,6 +849,27 @@
 </footer>
 
         <script src="js/app.min.js"></script>
-        
+        <script>
+
+            ymaps.ready(init);
+            function init(){
+                // Создание карты.
+                var myMap = new ymaps.Map("map", {
+                    // Координаты центра карты.
+                    // Порядок по умолчанию: «широта, долгота».
+                    // Чтобы не определять координаты центра карты вручную,
+                    // воспользуйтесь инструментом Определение координат.
+                    center: [55.665861, 37.7389992],
+                    // Уровень масштабирования. Допустимые значения:
+                    // от 0 (весь мир) до 19.
+                    zoom: 11,
+                    controls: []
+                });
+
+                myMap.geoObjects.add(new ymaps.Placemark([55.665861, 37.7389992], {
+                    
+                }))
+            }
+        </script>
     </body>
 </html>
